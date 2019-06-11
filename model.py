@@ -35,7 +35,7 @@ torch.multiprocessing.set_start_method('spawn', force=True)
 
 # ---- utility functions -----
 def get_loaders(batch_size, device):
-    data_root = 'VisionDataset/ceng483-s19-hw3-dataset'
+    data_root = 'ceng483-s19-hw3-dataset'
     train_set = hw3utils.HW3ImageFolder(root=os.path.join(data_root, 'train'), device=device)
     train_loader = torch.utils.data.DataLoader(train_set, batch_size=batch_size, shuffle=True, num_workers=0)
     val_set = hw3utils.HW3ImageFolder(root=os.path.join(data_root, 'val'), device=device)
